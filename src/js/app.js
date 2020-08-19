@@ -38,7 +38,7 @@ $(document).ready(() =>{
   });
 
   // Modal
-  $('[data-fancybox="modal"]').fancybox({
+  $('[data-fancybox]').fancybox({
     autoFocus: false
   });
   // Отмена стандартного поведения ссылки

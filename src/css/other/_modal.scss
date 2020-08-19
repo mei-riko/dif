@@ -42,3 +42,22 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .modal{
+        &__cta{
+            padding: $spacer;
+            .form_inline{
+                &__input{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                &__btn{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

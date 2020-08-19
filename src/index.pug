@@ -8,7 +8,7 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet")
         link(href="./lato/latofonts.css" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
-        link(href='./css/animate.css', rel='stylesheet')
+        //- link(href='./css/animate.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
@@ -18,7 +18,7 @@ html(lang="ru")
             .container
                 .row
                     .col-8.col-sm-12
-                        h1.content-header__title.animate__animated.animate__bounceIn Изготовление, монтаж и&nbsp;проектирование металлоконструкций
+                        h1.content-header__title Изготовление, монтаж и&nbsp;проектирование металлоконструкций
                         p.content-header__offer Мы предлагаем комплексные решения, которые позволяют сократить временные, стоимостные и ресурсные издержки заказчика.
         section.content
             .container
@@ -43,13 +43,14 @@ html(lang="ru")
             .container
                 p.h2.d-none.d-sm-block.mb-sm-1 Высокий уровень качества
                 p.text-light.text-grey.d-none.d-sm-block.mb-sm-2 Весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций.
-                .row.no-gutters.advantage__row
-                    +advantage('Коммерческое предложение за 50 минут', '#advantage1')
-                    +advantage('Гарантия качества конструкций', '#advantage2')
-                    +advantage('Полный комплект документов', '#advantage3')
-                    +advantage('Строгое соблюдение сроков поставки', '#advantage4')
-                    +advantage('Изготовление по ГОСТам, ТУ и пр.', '#advantage5')
-                    +advantage('Гибкость к условиям заказчика', '#advantage6')
+                .content-advantage__block
+                    .row.no-gutters.content-advantage__row
+                        +advantage('Коммерческое предложение за 50 минут', '#advantage1')
+                        +advantage('Гарантия качества конструкций', '#advantage2')
+                        +advantage('Полный комплект документов', '#advantage3')
+                        +advantage('Строгое соблюдение сроков поставки', '#advantage4')
+                        +advantage('Изготовление по ГОСТам, ТУ и пр.', '#advantage5')
+                        +advantage('Гибкость к условиям заказчика', '#advantage6')
             .modal.modal_advantage#advantage1
                 p.h4.mb-2 Коммерческое предложение за 50 минут
                 .modal__content.mb-2
@@ -76,21 +77,22 @@ html(lang="ru")
         section.product#product
             .container
                 .row
-                    .col-3
+                    .col-3.col-sm-12
                         h2.product__title.mb-0 Продукция
-                    .col-9
+                    .col-9.d-sm-none
                         p.product__offer Компания ДИФ СтройИнжиниринг работает в разных направлениях по изготовлению различных металлических конструкций. Вся выпускаемая продукция отвечает самым высоким требованиям заказчика и проходит проверку на качество.
-                .row.pt-3.pb-4.product__row
-                    +product('Заборы', '#product1')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Навесы', '#product4')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Решётки', '#product5')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Арматурные каркасы', '#product6')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Беседки', '#product7')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo.jpg);")
-                    +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo.jpg);")
+                .product__block
+                    .row.pt-3.pb-4.product__row
+                        +product('Заборы', '#product1')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Навесы', '#product4')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Решётки', '#product5')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Арматурные каркасы', '#product6')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Беседки', '#product7')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo.jpg);")
             .modal.modal_product#product1
                 .modal__content.modal_product__content
                     p.h4.mb-2 Разработка металлических конструкций
@@ -120,12 +122,12 @@ html(lang="ru")
                             input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
                             label.checkbox__label(for="agree") согласен с 
                                 a.form__link-inverse(href="/policy.pdf" target="_blank") обработкой персональных данных
-        section.cta.pt-3.pb-3
+        section.cta.pt-3.pb-3.pt-sm-2.pb-sm-2
             .container
                 .row.justify-content-between.align-items-center
-                    .col-7
+                    .col-7.col-sm-12.mb-sm-2
                         h3.cta__title Не нашли нужное изделие? Спроектируем по индивидуальным параметрам!
-                    .col-5
+                    .col-5.col-sm-12
                         form.form.form_inline(action="")
                                 input.form_inline__input.form__input.form__input_inverse.phone(type="tel" placeholder="Телефон для связи")
                                 button.form_inline__btn.btn.btn_secondary(type="") Обсудить проект
@@ -133,21 +135,21 @@ html(lang="ru")
                                     input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
                                     label.checkbox__label(for="agree") согласен с 
                                         a.form__link-inverse(href="/policy.pdf" target="_blank") обработкой персональных данных
-        section.services.pt-4.pb-4
+        section.services.pt-4.pb-4.pt-sm-2.pb-sm-2
             .container
                 .row.align-items-center#project
-                    .col-5
+                    .col-5.col-sm-12.mb-sm-1
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Проектирование
                         p.services__intro Оказываем услуги по проектированию и подготовке документации по объекту. Мы предлагаем весь комплекс работ: от составления технического задания до составления проектных документов и непосредственного проектирования объекта. Такой подход поможет оптимизировать расходы, а также уделить надлежащее внимание всем нюансам, которые могут возникнуть во время работы над проектом.
                         +link-modal('Разработка металлической конструкции')(class="services__link")
                         +link-modal('Разработка документации конструкции')(class="services__link")
-                    .col-6
-                        img.services__image(src="../img/illustration.png")
-                .row.align-items-center#production
-                    .col-6
-                        img.services__image(src="../img/illustration.png")
-                    .col-5
+                    .col-6.col-sm-12
+                        img.img-fluid.services__image(src="../img/illustration.png")
+                .row.flex-sm-column-reverse.align-items-center#production
+                    .col-6.col-sm-12
+                        img.img-fluid.services__image(src="../img/illustration.png")
+                    .col-5.col-sm-12.mb-sm-1
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Производство
                         p.services__intro Производственная база компании ДИФ СтройИнжиниринг позволяет обеспечить высокое качество предлагаемых металлоконструкций. Техническое оснащение позволяет нам выполнять заказы по производству металлоконструкций различной сложности.
@@ -157,22 +159,22 @@ html(lang="ru")
                         +link-modal('Сверление металла')(class="services__link")
                         +link-modal('Порошковая окраска')(class="services__link")
                 .row.align-items-center#assembly
-                    .col-5
+                    .col-5.col-sm-12.mb-sm-1
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Монтаж
                         p.services__intro  Профессиональный монтаж – это гарантия долгого срока службы и беспроблемной эксплуатации постройки, металлокаркаса здания. Мы осуществляем сборку и установку изделий из металла любого уровня сложности. 
                         +link-modal('Узнать больше')(class="services__link")
-                    .col-6
-                        img.services__image(src="../img/illustration.png")
-                .row.align-items-center#delivery
-                    .col-6
-                        img.services__image(src="../img/illustration.png")
-                    .col-5
+                    .col-6.col-sm-12
+                        img.img-fluid.services__image(src="../img/illustration.png")
+                .row.flex-sm-column-reverse.align-items-center#delivery
+                    .col-6.col-sm-12
+                        img.img-fluid.services__image(src="../img/illustration.png")
+                    .col-5.col-sm-12.mb-sm-1
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Доставка
                         p.services__intro Доставка металлоконструкций осуществляется по Санкт-Петербургу и Ленинградской области. Автопарк компании дает возможность доставлять металлоконструкции любых размеров. 
                         +link-modal('Узнать больше')(class="services__link")
-        section.pt-4.pb-4.bg-black#about
+        section.pt-4.pb-4.bg-black#about.pt-sm-2.pb-sm-2
             .container
                 h3 Этапы работы
                 .row
@@ -180,10 +182,10 @@ html(lang="ru")
                     +step('02', 'Заключение договора', 'подписание договора в 2 экземплярах и внесение 50% предоплаты')
                     +step('03', 'Работы по заявке', 'изготовление издения сопровождается обязательным фотоотчетом')
                     +step('FINAL', 'Готовая металлическая конструкция', 'на 100% соответствующая вашим  изначальным требованиям')(class="step--last")
-        .contact.pt-4.pb-4#contact
+        .contact.pt-4.pb-4#contact.pt-sm-2.pb-sm-2
             .container
-                .row.align-items-center
-                    .col-3
+                .row.align-items-center.align-items-sm-start
+                    .col-3.col-sm-7
                         ul.list
                             li.list__item
                                 span.contact__subtitle Телефон
@@ -194,7 +196,7 @@ html(lang="ru")
                             li.list__item
                                 span.contact__subtitle Адрес   
                                 span.contact__title Г. Санкт-Петербург, ул. Бухарестская д.1, офис 510
-                    .col-3
+                    .col-3.col-sm-5
                         ul.list
                             li.list__item
                                 span.contact__subtitle E-mail
@@ -205,7 +207,7 @@ html(lang="ru")
                             li.list__item
                                 span.contact__subtitle КПП   
                                 span.contact__title 7841030006
-                    .col-6
+                    .col-6.col-sm-12.mt-sm-1
                         .contact__map#maps
 
         include chunks/footer.pug

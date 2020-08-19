@@ -4,8 +4,24 @@
     padding: 20px 0;
     color: $grey;
     background-color: $black;
+    
+    &__logo{
+        width: 100%;
+        height: 48px;
+
+        display: inline-block;
+        background: url('../icon/logo-full_inverse.svg') no-repeat left center/contain;
+    }
 
     &__intro{
         font-size: 12px;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        &__logo{
+            display: none;
+        }
     }
 }

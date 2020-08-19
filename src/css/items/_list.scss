@@ -22,3 +22,11 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list{
+        &__item{
+            margin-bottom: $spacer/2;
+        }
+    }
+}

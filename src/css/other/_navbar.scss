@@ -32,17 +32,14 @@
 .navbar-toggle{
     display: none;
 }
-.navbar-phone{
-    display: none;
-}
-.navbar-location{
+.navbar-icon{
     display: none;
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .navbar-mobile{
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     .navbar-collapse{
         display: none;
@@ -58,8 +55,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        padding-left: 20px;
         &__icon{
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
     }
     .navbar-icon{
@@ -67,6 +66,7 @@
         font-size: 8px;
         font-weight: 800;
 
+        white-space: nowrap;
         text-transform: uppercase;
         text-align: center;
 
@@ -74,7 +74,11 @@
         flex-direction: column;
         align-items: center;
         &__icon{
-            margin-bottom: 3px;
+            margin-bottom: 5px;
+        }
+
+        &_phone{
+            padding-left: 20px;
         }
     }
 }

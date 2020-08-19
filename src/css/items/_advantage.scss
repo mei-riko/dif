@@ -8,7 +8,7 @@
     background: $dark-grey;
     border: 1px solid $border-color;
 
-    padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 3);
+    padding: map-get($map: $spacers, $key: 3);
 
     &__title{
         @extend .h5;
@@ -31,6 +31,24 @@
             color: $white;
             text-decoration: none;
             background: $black;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .advantage{
+        padding: 30px 20px;
+        height: 100px;
+
+        &__title{
+            @extend .mb-sm-0;
+        }
+        &__intro{
+            display: none;
+        }
+        &__button{
+            top: 5px;
+            right: 5px;
         }
     }
 }

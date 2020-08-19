@@ -55,6 +55,64 @@
                 background: inherit;
                 left: 30px;
                 bottom: -40px;
+                max-width: calc(100% - 30px);
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .step{
+        margin-bottom: $spacer;
+        position: relative;
+        &:after{
+            content:'';
+            display: block;
+
+            background-color: $red;
+            height: calc(100% + 24px);
+            width: 1px;
+
+            position: absolute;
+            top: 10px;
+            left: 8px;
+
+            z-index: 1;
+        }
+
+        &__number{
+            padding-left: $spacer;
+            padding-bottom: 0;
+            height: auto;
+            &:after{
+                display: none;
+            }
+        }
+        &__icon{
+            top: -2px;
+            bottom: auto;
+        }
+        &__title{
+            margin: 15px 0 10px;
+            padding-left: $spacer;
+        }
+        &__intro{
+            padding-left: $spacer;
+        }
+
+        &--last{
+            margin-bottom: 0;
+            &:after{
+                display: none;
+            }
+            .step__number{
+                margin-bottom: 40px;
+                &:after{
+                    display: block;
+                    font-size: 44px;
+                    line-height: 1;
+                    bottom: -30px;
+                }
             }
         }
     }

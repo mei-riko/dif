@@ -21,3 +21,15 @@
         background-color: $black;
     }
 }
+
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .contact{
+        &__subtitle{
+            font-size: 12px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+    }
+}

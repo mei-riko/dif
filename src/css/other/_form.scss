@@ -95,3 +95,20 @@
         color: $red!important
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .form_inline{
+        &__input{
+            flex: 0 0 calc(100% - 150px);
+            max-width: calc(100% - 150px);
+            margin-bottom: 0;
+            height: 38px;
+        }
+        &__btn{
+            flex: 0 0 140px;
+            max-width: 140px;
+            height: 38px;
+            padding: 4px 10px 6px;
+        }
+    }
+}

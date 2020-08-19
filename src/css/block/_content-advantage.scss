@@ -1,12 +1,4 @@
-.product{
-    &__title{
-        @extend .h1;
-    }
-    &__offer{
-        width: 630px;
-        max-width: 100%;
-        margin: 18px auto 0;
-    }
+.content-advantage{
     &__block{
         overflow-x: auto;
     }
@@ -16,7 +8,7 @@
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .product{
+    .content-advantage{
         &__block{
             margin-right: -$spacer/2;
         }

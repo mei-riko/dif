@@ -1,0 +1,174 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Landing Page
+
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet")
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/mixin.pug
+        include chunks/header.pug
+        section.content-header
+            .container
+                .row
+                    .col-7
+                        h1.content-header__title Изготовление, монтаж и&nbsp;проектирование металлоконструкций
+                        p.content-header__offer Мы предлагаем комплексные решения, которые позволяют сократить временные, стоимостные и ресурсные издержки заказчика.
+        section.content
+            .container
+                .row
+                    .col-7
+                        p Компания ДИФ СтройИнжиниринг предлагает весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций нашими специалистами – это оптимальная стоимость и высокий уровень качества, проверенный временем.
+                    .col-5
+                        .content-cta.content__form
+                            h2.h4 Получите КП через 50 минут!
+                            p.text-light Менеджер перезвонит, чтобы узнать всё о том, что вам нужно
+                            form.form(action="")
+                                input.form__input.phone(type="tel" placeholder="Телефон для связи")
+                                button.btn.btn_action(type="") Начать работу
+                                .form__agree.checkbox
+                                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                    label.checkbox__label(for="agree") согласен с 
+                                        a.link-underline(href="/policy.pdf" target="_blank") обработкой персональных данных
+        section.content-advantage
+            .container
+                .row.no-gutters
+                    +advantage('Коммерческое предложение за 50 минут', '#advantage1')
+                    +advantage('Гарантия качества конструкций', '#advantage2')
+                    +advantage('Полный комплект документов', '#advantage3')
+                    +advantage('Строгое соблюдение сроков поставки', '#advantage4')
+                    +advantage('Изготовление по ГОСТам, ТУ и пр.', '#advantage5')
+                    +advantage('Гибкость к условиям заказчика', '#advantage6')
+            .modal#advantage1
+                p Hello advantage 1!
+            .modal#advantage2
+                p Hello advantage 2!
+            .modal#advantage3
+                p Hello advantage 3!
+            .modal#advantage4
+                p Hello advantage 4!
+            .modal#advantage5
+                p Hello advantage 5!
+            .modal#advantage6
+                p Hello advantage 6!
+        section.product#product
+            .container
+                .row
+                    .col-3
+                        h2.product__title Продукция
+                    .col-9
+                        p.product__offer Компания ДИФ СтройИнжиниринг работает в разных направлениях по изготовлению различных металлических конструкций. Вся выпускаемая продукция отвечает самым высоким требованиям заказчика и проходит проверку на качество.
+                .row
+                    +product('Заборы', '#product1')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Навесы', '#product4')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Решётки', '#product5')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Арматурные каркасы', '#product6')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Беседки', '#product7')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo.jpg);")
+                    +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo.jpg);")
+        section.cta
+            .container
+                .row.justify-content-between
+                    .col-6
+                        h3.cta__title Не нашли нужное изделие? Спроектируем по индивидуальным параметрам!
+                    .col-5
+                        form.form_inline(action="")
+                                input.form__input.phone(type="tel" placeholder="Телефон для связи")
+                                button.btn.btn_action(type="") Обсудить проект
+                                .form__agree.checkbox
+                                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                                    label.checkbox__label(for="agree") согласен с 
+                                        a.link-underline(href="/policy.pdf" target="_blank") обработкой персональных данных
+        section.services
+            .container
+                .row#project
+                    .col-5
+                        p.services__subtitle Комплекстность услуг
+                        h3.services__title Проектирование
+                        p.services__intro Оказываем услуги по проектированию и подготовке документации по объекту. Мы предлагаем весь комплекс работ: от составления технического задания до составления проектных документов и непосредственного проектирования объекта. Такой подход поможет оптимизировать расходы, а также уделить надлежащее внимание всем нюансам, которые могут возникнуть во время работы над проектом.
+                        +link-modal('Разработка металлической конструкции')
+                        +link-modal('Разработка документации конструкции')                      
+                    .col-6
+                        img.services__image(src="../img/illustration.png")
+                .row#production
+                    .col-6
+                        img.services__image(src="../img/illustration.png")
+                    .col-5
+                        p.services__subtitle Комплекстность услуг
+                        h3.services__title Производство
+                        p.services__intro Производственная база компании ДИФ СтройИнжиниринг позволяет обеспечить высокое качество предлагаемых металлоконструкций. Техническое оснащение позволяет нам выполнять заказы по производству металлоконструкций различной сложности.
+                        +link-modal('Сварочные работы')
+                        +link-modal('Резка металла')
+                        +link-modal('Грунтовка')
+                        +link-modal('Сверление металла')
+                        +link-modal('Порошковая окраска')
+                .row#assembly
+                    .col-5
+                        p.services__subtitle Комплекстность услуг
+                        h3.services__title Монтаж
+                        p.services__intro  Профессиональный монтаж – это гарантия долгого срока службы и беспроблемной эксплуатации постройки, металлокаркаса здания. Мы осуществляем сборку и установку изделий из металла любого уровня сложности. 
+                        +link-modal('Узнать больше')
+                    .col-6
+                        img.services__image(src="../img/illustration.png")
+                .row#delivery
+                    .col-6
+                        img.services__image(src="../img/illustration.png")
+                    .col-5
+                        p.services__subtitle Комплекстность услуг
+                        h3.services__title Доставка
+                        p.services__intro Доставка металлоконструкций осуществляется по Санкт-Петербургу и Ленинградской области. Автопарк компании дает возможность доставлять металлоконструкции любых размеров. 
+                        +link-modal('Узнать больше')
+        section#about
+            .container
+                h3 Этапы работы
+                .row
+                    +step('01', 'Заявка', 'обсуждение всех деталей конструкции, монтажа, доставки и пр.')
+                    +step('02', 'Заключение договора', 'подписание договора в 2 экземплярах и внесение 50% предоплаты')
+                    +step('03', 'Работы по заявке', 'изготовление издения сопровождается обязательным фотоотчетом')
+                    +step('FINAL', 'Готовая металлическая конструкция', 'на 100% соответствующая вашим  изначальным требованиям')(class="step--last")
+        .contact#contact
+            .container
+                .row
+                    .col-3
+                        ul.list
+                            li.list__item
+                                span.contact__subtitle Телефон
+                                a.contact__title.contact__link(href="tel:8 (812) 313-76-09") 8 (812) 313-76-09                                
+                            li.list__item
+                                span.contact__subtitle Время работы
+                                span.contact__title пн - пт с 10.00 до 19.00
+                            li.list__item
+                                span.contact__subtitle Адрес   
+                                span.contact__title Г. Санкт-Петербург, ул. Бухарестская д.1, офис 510
+                    .col-3
+                        ul.list
+                            li.list__item
+                                span.contact__subtitle E-mail
+                                a.contact__title.contact__link(href="mailto:info@dif.ru") info@dif.ru                                
+                            li.list__item
+                                span.contact__subtitle ИНН
+                                span.contact__title 7841030006
+                            li.list__item
+                                span.contact__subtitle КПП   
+                                span.contact__title 7841030006
+                    .col-6
+                        #maps
+
+        include chunks/footer.pug
+        .navbar-overlay
+        .modal#callback
+            p Hello world!
+
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        script(src="./js/jquery.inputmask.js")
+
+        script(src="./js/app.min.js")

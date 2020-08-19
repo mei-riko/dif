@@ -1,0 +1,393 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-2"><a class="header__logo" href="/" title=""></a></div>
+          <div class="col-6"><span class="navbar-toggle" id="nav"></span>
+            <div class="navbar-collapse"><span class="navbar-close"></span>
+              <div class="navbar navbar_secondary"><a class="navbar__item location scroll" href="#maps" title="">
+                  Санкт-Петербург<svg class="location__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00002 2.82401C5.92188 2.82401 5.0448 3.70111 5.0448 4.77922C5.0448 5.85736 5.92191 6.73444 7.00002 6.73444C8.07812 6.73444 8.95523 5.85733 8.95523 4.77922C8.95523 3.70111 8.07815 2.82401 7.00002 2.82401Z" fill="#ADADAD"/>
+<path d="M6.99998 0C4.32322 0 2.14551 2.17771 2.14551 4.85447C2.14551 5.94937 2.91357 7.75384 4.42833 10.2178C5.5358 12.0192 6.65895 13.5395 6.67016 13.5546L6.99998 14L7.3298 13.5546C7.34101 13.5395 8.46416 12.0192 9.57163 10.2178C11.0864 7.75384 11.8545 5.94937 11.8545 4.85447C11.8545 2.17771 9.67674 0 6.99998 0ZM6.99998 7.55524C5.46928 7.55524 4.22399 6.30993 4.22399 4.77925C4.22399 3.24855 5.4693 2.00326 6.99998 2.00326C8.53066 2.00326 9.77597 3.24857 9.77597 4.77925C9.77597 6.30993 8.53068 7.55524 6.99998 7.55524Z" fill="#ADADAD"/>
+</svg></a><a class="navbar__item scroll" href="#about" title="">О нас</a><a class="navbar__item scroll" href="#delivery" title="">Доставка</a><a class="navbar__item scroll" href="#contact" title="">Контакты</a></div>
+              <div class="navbar navbar_main"><a class="navbar__item scroll" href="#product" title="">Продукция</a><a class="navbar__item scroll" href="#project" title="">Проектирование</a><a class="navbar__item scroll" href="#production" title="">Производство</a><a class="navbar__item scroll" href="#assembly" title="">Монтаж</a></div>
+            </div>
+          </div>
+          <div class="col-2 text-right"><a class="header__phone" href="tel:8 800 000 20 30">8 800 000 20 30</a></div>
+          <div class="col-2 text-right"><a class="btn btn_secondary" href="javascript;" data-fancybox="modal" data-src="#callback">Заказать звонок</a></div>
+        </div>
+      </div>
+    </header>
+    <section class="content-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <h1 class="content-header__title">Изготовление, монтаж и&nbsp;проектирование металлоконструкций</h1>
+            <p class="content-header__offer">Мы предлагаем комплексные решения, которые позволяют сократить временные, стоимостные и ресурсные издержки заказчика.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <p>Компания ДИФ СтройИнжиниринг предлагает весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций нашими специалистами – это оптимальная стоимость и высокий уровень качества, проверенный временем.</p>
+          </div>
+          <div class="col-5">
+            <div class="content-cta content__form">
+              <h2 class="h4">Получите КП через 50 минут!</h2>
+              <p class="text-light">Менеджер перезвонит, чтобы узнать всё о том, что вам нужно</p>
+              <form class="form" action="">
+                <input class="form__input phone" type="tel" placeholder="Телефон для связи"/>
+                <button class="btn btn_action" type="">Начать работу</button>
+                <div class="form__agree checkbox">
+                  <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+                  <label class="checkbox__label" for="agree">согласен с <a class="link-underline" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content-advantage">
+      <div class="container">
+        <div class="row no-gutters">
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage1" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Коммерческое предложение за 50 минут</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage2" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Гарантия качества конструкций</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage3" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Полный комплект документов</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage4" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Строгое соблюдение сроков поставки</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage5" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Изготовление по ГОСТам, ТУ и пр.</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="advantage advantage_modal"><a class="advantage__button" data-fancybox="advantage" data-src="#advantage6" href="javascript;">
+                    <svg class="advantage__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                    </svg></a>
+                  <h4 class="advantage__title">Гибкость к условиям заказчика</h4>
+                  <p class="advantage__intro">Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.</p>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="modal" id="advantage1">
+        <p>Hello advantage 1!</p>
+      </div>
+      <div class="modal" id="advantage2">
+        <p>Hello advantage 2!</p>
+      </div>
+      <div class="modal" id="advantage3">
+        <p>Hello advantage 3!</p>
+      </div>
+      <div class="modal" id="advantage4">
+        <p>Hello advantage 4!</p>
+      </div>
+      <div class="modal" id="advantage5">
+        <p>Hello advantage 5!</p>
+      </div>
+      <div class="modal" id="advantage6">
+        <p>Hello advantage 6!</p>
+      </div>
+    </section>
+    <section class="product" id="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <h2 class="product__title">Продукция</h2>
+          </div>
+          <div class="col-9">
+            <p class="product__offer">Компания ДИФ СтройИнжиниринг работает в разных направлениях по изготовлению различных металлических конструкций. Вся выпускаемая продукция отвечает самым высоким требованиям заказчика и проходит проверку на качество.</p>
+          </div>
+        </div>
+        <div class="row">
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product1" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Заборы</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product2" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Ограждения</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product3" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Лестницы</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product4" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Навесы</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product5" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Решётки</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product6" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Арматурные каркасы</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product7" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Беседки</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product8" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Закладные детали</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product9" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Металлические формы</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+              <div class="col-3"><a class="product-item" data-fancybox="data-fancybox" data-src="#product10" href="javascript;">
+                  <div class="product-item__image" style="background-image:url(../img/product-demo.jpg);"></div>
+                  <p class="product-item__title">Контейнерные площадки</p>
+                  <p class="product-item__link">Больше о продукции —</p>
+                  <svg class="product-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-6">
+            <h3 class="cta__title">Не нашли нужное изделие? Спроектируем по индивидуальным параметрам!</h3>
+          </div>
+          <div class="col-5">
+            <form class="form_inline" action="">
+              <input class="form__input phone" type="tel" placeholder="Телефон для связи"/>
+              <button class="btn btn_action" type="">Обсудить проект</button>
+              <div class="form__agree checkbox">
+                <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+                <label class="checkbox__label" for="agree">согласен с <a class="link-underline" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="row" id="project">
+          <div class="col-5">
+            <p class="services__subtitle">Комплекстность услуг</p>
+            <h3 class="services__title">Проектирование</h3>
+            <p class="services__intro">Оказываем услуги по проектированию и подготовке документации по объекту. Мы предлагаем весь комплекс работ: от составления технического задания до составления проектных документов и непосредственного проектирования объекта. Такой подход поможет оптимизировать расходы, а также уделить надлежащее внимание всем нюансам, которые могут возникнуть во время работы над проектом.</p><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Разработка металлической конструкции</span></a><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Разработка документации конструкции</span></a>
+          </div>
+          <div class="col-6"><img class="services__image" src="../img/illustration.png"/></div>
+        </div>
+        <div class="row" id="production">
+          <div class="col-6"><img class="services__image" src="../img/illustration.png"/></div>
+          <div class="col-5">
+            <p class="services__subtitle">Комплекстность услуг</p>
+            <h3 class="services__title">Производство</h3>
+            <p class="services__intro">Производственная база компании ДИФ СтройИнжиниринг позволяет обеспечить высокое качество предлагаемых металлоконструкций. Техническое оснащение позволяет нам выполнять заказы по производству металлоконструкций различной сложности.</p><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Сварочные работы</span></a><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Резка металла</span></a><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Грунтовка</span></a><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Сверление металла</span></a><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Порошковая окраска</span></a>
+          </div>
+        </div>
+        <div class="row" id="assembly">
+          <div class="col-5">
+            <p class="services__subtitle">Комплекстность услуг</p>
+            <h3 class="services__title">Монтаж</h3>
+            <p class="services__intro"> Профессиональный монтаж – это гарантия долгого срока службы и беспроблемной эксплуатации постройки, металлокаркаса здания. Мы осуществляем сборку и установку изделий из металла любого уровня сложности. </p><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Узнать больше</span></a>
+          </div>
+          <div class="col-6"><img class="services__image" src="../img/illustration.png"/></div>
+        </div>
+        <div class="row" id="delivery">
+          <div class="col-6"><img class="services__image" src="../img/illustration.png"/></div>
+          <div class="col-5">
+            <p class="services__subtitle">Комплекстность услуг</p>
+            <h3 class="services__title">Доставка</h3>
+            <p class="services__intro">Доставка металлоконструкций осуществляется по Санкт-Петербургу и Ленинградской области. Автопарк компании дает возможность доставлять металлоконструкции любых размеров. </p><a class="link-modal" href="javascript;" data-fancybox="" data-src="#info">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B"></path>
+                  </svg><span>Узнать больше</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h3>Этапы работы</h3>
+        <div class="row">
+              <div class="col-3">
+                <div class="step"><span class="step_number">01</span>
+                  <p class="step__title">Заявка</p>
+                  <p class="step__intro">обсуждение всех деталей конструкции, монтажа, доставки и пр.</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="step"><span class="step_number">02</span>
+                  <p class="step__title">Заключение договора</p>
+                  <p class="step__intro">подписание договора в 2 экземплярах и внесение 50% предоплаты</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="step"><span class="step_number">03</span>
+                  <p class="step__title">Работы по заявке</p>
+                  <p class="step__intro">изготовление издения сопровождается обязательным фотоотчетом</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="step step--last"><span class="step_number">FINAL</span>
+                  <p class="step__title">Готовая металлическая конструкция</p>
+                  <p class="step__intro">на 100% соответствующая вашим  изначальным требованиям</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <ul class="list">
+              <li class="list__item"><span class="contact__subtitle">Телефон</span><a class="contact__title contact__link" href="tel:8 (812) 313-76-09">8 (812) 313-76-09                                </a></li>
+              <li class="list__item"><span class="contact__subtitle">Время работы</span><span class="contact__title">пн - пт с 10.00 до 19.00</span></li>
+              <li class="list__item"><span class="contact__subtitle">Адрес   </span><span class="contact__title">Г. Санкт-Петербург, ул. Бухарестская д.1, офис 510</span></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="list">
+              <li class="list__item"><span class="contact__subtitle">E-mail</span><a class="contact__title contact__link" href="mailto:info@dif.ru">info@dif.ru                                </a></li>
+              <li class="list__item"><span class="contact__subtitle">ИНН</span><span class="contact__title">7841030006</span></li>
+              <li class="list__item"><span class="contact__subtitle">КПП   </span><span class="contact__title">7841030006</span></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <div id="maps"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-4"><a class="footer__logo" src="/"></a>
+            <div class="location">
+              Санкт-Петербург<svg class="location__icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00002 2.82401C5.92188 2.82401 5.0448 3.70111 5.0448 4.77922C5.0448 5.85736 5.92191 6.73444 7.00002 6.73444C8.07812 6.73444 8.95523 5.85733 8.95523 4.77922C8.95523 3.70111 8.07815 2.82401 7.00002 2.82401Z" fill="#ADADAD"/>
+<path d="M6.99998 0C4.32322 0 2.14551 2.17771 2.14551 4.85447C2.14551 5.94937 2.91357 7.75384 4.42833 10.2178C5.5358 12.0192 6.65895 13.5395 6.67016 13.5546L6.99998 14L7.3298 13.5546C7.34101 13.5395 8.46416 12.0192 9.57163 10.2178C11.0864 7.75384 11.8545 5.94937 11.8545 4.85447C11.8545 2.17771 9.67674 0 6.99998 0ZM6.99998 7.55524C5.46928 7.55524 4.22399 6.30993 4.22399 4.77925C4.22399 3.24855 5.4693 2.00326 6.99998 2.00326C8.53066 2.00326 9.77597 3.24857 9.77597 4.77925C9.77597 6.30993 8.53068 7.55524 6.99998 7.55524Z" fill="#ADADAD"/>
+</svg>
+            </div>
+          </div>
+          <div class="col-4 text-center">
+            <p class="footer__intro">© 1998 – 2020 ООО «ДИФ». Все права защищены.</p>
+          </div>
+          <div class="col-4 text-right">
+            <p class="footer__intro">Разработано студией <a class="footer__link" href="/">SOHO</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="navbar-overlay"></div>
+    <div class="modal" id="callback">
+      <p>Hello world!</p>
+    </div>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

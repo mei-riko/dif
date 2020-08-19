@@ -1,0 +1,11 @@
+.content{
+    position: relative;
+    padding: 70px 0;
+    background-color: $black;
+
+    &__form{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

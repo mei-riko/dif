@@ -1,0 +1,28 @@
+.content-header{
+    position: relative;
+    padding: 150px 0;
+
+    background: url('../img/content-header-bg.jpeg') no-repeat center / cover;
+
+    &__title{
+        @extend .h2;
+        margin-bottom: $spacer/2;
+    }
+    &__offer{
+        width: 550px;
+        max-width: 100%;
+    }
+
+    &:before{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(90deg, #242732 0%, rgba(36, 39, 50, 0.8) 73.2%, rgba(36, 39, 50, 0) 100%);
+    }
+}

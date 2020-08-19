@@ -1,0 +1,11 @@
+.footer{
+    font-size: 12px;
+    font-family: $font-family-heading;
+    padding: 20px 0;
+    color: $grey;
+    background-color: $black;
+
+    &__intro{
+        font-size: 12px;
+    }
+}

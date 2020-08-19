@@ -1,0 +1,9 @@
+.cta{
+    background-color: $red;
+
+    &__title{
+        margin: 0;
+        width: 650px;
+        max-width: 100%;
+    }
+}

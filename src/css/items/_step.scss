@@ -1,0 +1,61 @@
+.step{
+    &__number{
+        position: relative;
+
+        color: $red;
+        font-family: $font-family-heading;
+        font-weight: $font-weight-heading;
+        height: 46px;
+
+        display: block;
+        padding-bottom: 20px;
+        
+        &:after{
+            content:'';
+            display: block;
+
+            background-color: $red;
+            width: calc(100% + 24px);
+            height: 1px;
+
+            position: absolute;
+            bottom: 0;
+            left: 6px;
+
+            z-index: 1;
+        }
+    }
+    &__icon{
+        position: absolute;
+        bottom: -12px;
+        left: -4px;
+        z-index: 2;
+    }
+    &__title{
+        font-family: $font-family-heading;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+
+        margin: 40px 0 20px;
+    }
+    &__intro{
+        color: $grey;
+    }
+
+
+    &--last{
+        .step__number{
+            font-size: 0;
+            &:after{
+                content: 'FINAL';
+                height: auto;
+                font-size: 64px;
+                font-weight: 400;
+                background: inherit;
+                left: 30px;
+                bottom: -40px;
+            }
+        }
+    }
+}

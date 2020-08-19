@@ -16,11 +16,11 @@ h1, h2, h3, h4, h5, h6,
     font-family: $font-family-heading;
     font-weight: $font-weight-heading;
     line-height: $line-height-heading;
-    margin-bottom: map-get($spacers, 4);
+    margin-bottom: map-get($spacers, 2);
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: map-get($spacers, 6);
+    margin-top: map-get($spacers, 1);
 }
 .h1,h1{font-size: 64px;}
 .h2,h2{font-size: 46px;}
@@ -32,11 +32,14 @@ h1, h2, h3, h4, h5, h6,
 p {
     font-size: 1rem;
     margin-top: 0;
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, 1);
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 ol, ul{
     padding: 0;
-    margin-bottom: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, 1);
 }
 a{
     display: inline-block;
@@ -50,15 +53,42 @@ a{
         outline: none;
     }
 }
-.link{
-    &_inverse{
-        color: $link-hover-color;
-        &:hover{
-            color: $link-color;
+
+.link-inverse{
+    color: $link-hover-color;
+    &:hover{
+        color: $link-color;
+    }
+}
+.link-modal{
+    position: relative;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-heading;
+    color: $white;
+    padding-left: $spacer;
+
+    &__icon{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+
+        top: calc(50% - 12px);
+        left: 0;
+
+        path{
+            transition: .4s;
         }
     }
-    &_underline{
-        text-decoration: underline;
+
+    &:hover, &:focus{
+        text-decoration: none;
+        .link-modal__icon path{
+            fill: $grey;
+        }
+    }
+
+    & + .link-modal{
+        margin-top: $spacer/2;
     }
 }
 
@@ -74,6 +104,8 @@ a{
     }
 }
 
+.bg-black{background-color: $black;}
+
 .p-relative{position: relative;}
 .p-sticky{position: sticky; top: 0; left: 0; z-index: 101;}
 .p-absolute{position: absolute; top: 0; left: 0; z-index: 101;}
@@ -86,7 +118,7 @@ a{
 
 .text-white{color: $white;}
 .text-black{color: $black;}
-// .text-gold{color: $gold;}
+.text-grey{color: $grey;}
 
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}
@@ -113,39 +145,32 @@ a{
 .blockquote, blockquote{}
 
 .mt{
-    &-0{}
-    &-1{}
-    &-2{}
-    &-3{}
-    &-4{}
+    &-0{margin-top: map-get($spacers, 0);}
+    &-1{margin-top: map-get($spacers, 1);}
+    &-2{margin-top: map-get($spacers, 2);}
+    &-3{margin-top: map-get($spacers, 3);}
+    &-4{margin-top: map-get($spacers, 4);}
 }
 .mb{
-    &-0{}
-    &-1{}
-    &-2{}
-    &-3{}
-    &-4{}
-}
-.mr{
-    &-0{}
-}
-.ml{
-    &_0{}
-    &-auto{}
+    &-0{margin-bottom: map-get($spacers, 0);}
+    &-1{margin-bottom: map-get($spacers, 1);}
+    &-2{margin-bottom: map-get($spacers, 2);}
+    &-3{margin-bottom: map-get($spacers, 3);}
+    &-4{margin-bottom: map-get($spacers, 4);}
 }
 .pt{
-    &-0{}
-    &-1{}
-    &-2{}
-    &-3{}
-    &-4{}
+    &-0{padding-top: map-get($spacers, 0);}
+    &-1{padding-top: map-get($spacers, 1);}
+    &-2{padding-top: map-get($spacers, 2);}
+    &-3{padding-top: map-get($spacers, 3);}
+    &-4{padding-top: map-get($spacers, 4);}
 }
 .pb{
-    &-0{}
-    &-1{}
-    &-2{}
-    &-3{}
-    &-4{}
+    &-0{padding-bottom: map-get($spacers, 0);}
+    &-1{padding-bottom: map-get($spacers, 1);}
+    &-2{padding-bottom: map-get($spacers, 2);}
+    &-3{padding-bottom: map-get($spacers, 3);}
+    &-4{padding-bottom: map-get($spacers, 4);}
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
@@ -159,6 +184,34 @@ a{
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    .mt-xl{
+        &-0{margin-top: map-get($spacers, 0);}
+        &-1{margin-top: map-get($spacers, 1);}
+        &-2{margin-top: map-get($spacers, 2);}
+        &-3{margin-top: map-get($spacers, 3);}
+        &-4{margin-top: map-get($spacers, 4);}
+    }
+    .mb-xl{
+        &-0{margin-bottom: map-get($spacers, 0);}
+        &-1{margin-bottom: map-get($spacers, 1);}
+        &-2{margin-bottom: map-get($spacers, 2);}
+        &-3{margin-bottom: map-get($spacers, 3);}
+        &-4{margin-bottom: map-get($spacers, 4);}
+    }
+    .pt-xl{
+        &-0{padding-top: map-get($spacers, 0);}
+        &-1{padding-top: map-get($spacers, 1);}
+        &-2{padding-top: map-get($spacers, 2);}
+        &-3{padding-top: map-get($spacers, 3);}
+        &-4{padding-top: map-get($spacers, 4);}
+    }
+    .pb-xl{
+        &-0{padding-bottom: map-get($spacers, 0);}
+        &-1{padding-bottom: map-get($spacers, 1);}
+        &-2{padding-bottom: map-get($spacers, 2);}
+        &-3{padding-bottom: map-get($spacers, 3);}
+        &-4{padding-bottom: map-get($spacers, 4);}
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .d-lg{
@@ -170,6 +223,34 @@ a{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
+    }
+    .mt-lg{
+        &-0{margin-top: map-get($spacers, 0);}
+        &-1{margin-top: map-get($spacers, 1);}
+        &-2{margin-top: map-get($spacers, 2);}
+        &-3{margin-top: map-get($spacers, 3);}
+        &-4{margin-top: map-get($spacers, 4);}
+    }
+    .mb-lg{
+        &-0{margin-bottom: map-get($spacers, 0);}
+        &-1{margin-bottom: map-get($spacers, 1);}
+        &-2{margin-bottom: map-get($spacers, 2);}
+        &-3{margin-bottom: map-get($spacers, 3);}
+        &-4{margin-bottom: map-get($spacers, 4);}
+    }
+    .pt-lg{
+        &-0{padding-top: map-get($spacers, 0);}
+        &-1{padding-top: map-get($spacers, 1);}
+        &-2{padding-top: map-get($spacers, 2);}
+        &-3{padding-top: map-get($spacers, 3);}
+        &-4{padding-top: map-get($spacers, 4);}
+    }
+    .pb-lg{
+        &-0{padding-bottom: map-get($spacers, 0);}
+        &-1{padding-bottom: map-get($spacers, 1);}
+        &-2{padding-bottom: map-get($spacers, 2);}
+        &-3{padding-bottom: map-get($spacers, 3);}
+        &-4{padding-bottom: map-get($spacers, 4);}
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
@@ -183,8 +264,41 @@ a{
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
+    .mt-md{
+        &-0{margin-top: map-get($spacers, 0);}
+        &-1{margin-top: map-get($spacers, 1);}
+        &-2{margin-top: map-get($spacers, 2);}
+        &-3{margin-top: map-get($spacers, 3);}
+        &-4{margin-top: map-get($spacers, 4);}
+    }
+    .mb-md{
+        &-0{margin-bottom: map-get($spacers, 0);}
+        &-1{margin-bottom: map-get($spacers, 1);}
+        &-2{margin-bottom: map-get($spacers, 2);}
+        &-3{margin-bottom: map-get($spacers, 3);}
+        &-4{margin-bottom: map-get($spacers, 4);}
+    }
+    .pt-md{
+        &-0{padding-top: map-get($spacers, 0);}
+        &-1{padding-top: map-get($spacers, 1);}
+        &-2{padding-top: map-get($spacers, 2);}
+        &-3{padding-top: map-get($spacers, 3);}
+        &-4{padding-top: map-get($spacers, 4);}
+    }
+    .pb-md{
+        &-0{padding-bottom: map-get($spacers, 0);}
+        &-1{padding-bottom: map-get($spacers, 1);}
+        &-2{padding-bottom: map-get($spacers, 2);}
+        &-3{padding-bottom: map-get($spacers, 3);}
+        &-4{padding-bottom: map-get($spacers, 4);}
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    html,body {font-size: map-get($font-size, 'sm');}
+    .h1,h1{font-size: 32px;}
+    .h2,h2{font-size: 26px;}
+    .h3,h3{font-size: 22px;}
+    .h4,h4{font-size: 18px;}
     .d-sm{
         &-flex{display: flex;}
         &-none{display: none;}
@@ -194,5 +308,33 @@ a{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
+    }
+    .mt-sm{
+        &-0{margin-top: map-get($spacers, 0);}
+        &-1{margin-top: map-get($spacers, 1);}
+        &-2{margin-top: map-get($spacers, 2);}
+        &-3{margin-top: map-get($spacers, 3);}
+        &-4{margin-top: map-get($spacers, 4);}
+    }
+    .mb-sm{
+        &-0{margin-bottom: map-get($spacers, 0);}
+        &-1{margin-bottom: map-get($spacers, 1);}
+        &-2{margin-bottom: map-get($spacers, 2);}
+        &-3{margin-bottom: map-get($spacers, 3);}
+        &-4{margin-bottom: map-get($spacers, 4);}
+    }
+    .pt-sm{
+        &-0{padding-top: map-get($spacers, 0);}
+        &-1{padding-top: map-get($spacers, 1);}
+        &-2{padding-top: map-get($spacers, 2);}
+        &-3{padding-top: map-get($spacers, 3);}
+        &-4{padding-top: map-get($spacers, 4);}
+    }
+    .pb-sm{
+        &-0{padding-bottom: map-get($spacers, 0);}
+        &-1{padding-bottom: map-get($spacers, 1);}
+        &-2{padding-bottom: map-get($spacers, 2);}
+        &-3{padding-bottom: map-get($spacers, 3);}
+        &-4{padding-bottom: map-get($spacers, 4);}
     }
 }

@@ -6,8 +6,9 @@ html(lang="ru")
         title Landing Page
 
         link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet")
+        link(href="./lato/latofonts.css" rel="stylesheet")
         link(href='./css/style.css', rel='stylesheet')
+        link(href='./css/animate.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
@@ -16,54 +17,70 @@ html(lang="ru")
         section.content-header
             .container
                 .row
-                    .col-7
-                        h1.content-header__title Изготовление, монтаж и&nbsp;проектирование металлоконструкций
+                    .col-8.col-sm-12
+                        h1.content-header__title.animate__animated.animate__bounceIn Изготовление, монтаж и&nbsp;проектирование металлоконструкций
                         p.content-header__offer Мы предлагаем комплексные решения, которые позволяют сократить временные, стоимостные и ресурсные издержки заказчика.
         section.content
             .container
                 .row
-                    .col-7
+                    .col-7.pt-4.pb-4.d-sm-none
                         p Компания ДИФ СтройИнжиниринг предлагает весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций нашими специалистами – это оптимальная стоимость и высокий уровень качества, проверенный временем.
-                    .col-5
-                        .content-cta.content__form
-                            h2.h4 Получите КП через 50 минут!
-                            p.text-light Менеджер перезвонит, чтобы узнать всё о том, что вам нужно
+                    .col-1.d-sm-none &nbsp;
+                    .col-3.col-sm-12
+                        .content__form
+                            h2.h4.mb-1.content__form-title Получите КП через 50&nbsp;минут!
+                            p.text-light.content__form-offer Менеджер перезвонит, чтобы узнать всё&nbsp;о&nbsp;том, что вам&nbsp;нужно
                             form.form(action="")
-                                input.form__input.phone(type="tel" placeholder="Телефон для связи")
-                                button.btn.btn_action(type="") Начать работу
+                                .p-relative
+                                    span.form-validation.error Укажите номер телефона
+                                    input.form__input.form__input--full.phone.error(type="tel" placeholder="Телефон для связи")
+                                button.btn.btn_action.btn--full(type="") Начать работу
                                 .form__agree.checkbox
                                     input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
-                                    label.checkbox__label(for="agree") согласен с 
-                                        a.link-underline(href="/policy.pdf" target="_blank") обработкой персональных данных
-        section.content-advantage
+                                    label.checkbox__label(for="agree") обработка персональных 
+                                        a.link-underline(href="/policy.pdf" target="_blank") данных
+        section.content-advantage.pt-4.pb-4.pt-sm-2.pb-sm-2
             .container
-                .row.no-gutters
+                p.h2.d-none.d-sm-block.mb-sm-1 Высокий уровень качества
+                p.text-light.text-grey.d-none.d-sm-block.mb-sm-2 Весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций.
+                .row.no-gutters.advantage__row
                     +advantage('Коммерческое предложение за 50 минут', '#advantage1')
                     +advantage('Гарантия качества конструкций', '#advantage2')
                     +advantage('Полный комплект документов', '#advantage3')
                     +advantage('Строгое соблюдение сроков поставки', '#advantage4')
                     +advantage('Изготовление по ГОСТам, ТУ и пр.', '#advantage5')
                     +advantage('Гибкость к условиям заказчика', '#advantage6')
-            .modal#advantage1
-                p Hello advantage 1!
-            .modal#advantage2
+            .modal.modal_advantage#advantage1
+                p.h4.mb-2 Коммерческое предложение за 50 минут
+                .modal__content.mb-2
+                    p Lorem ipsum dolor sit amet. Deserunt mollitia animi, id est et aut perferendis. Voluptatem, quia non numquam eius modi. Suscipit laboriosam, nisi ut et dolorum fuga aspernatur. Nihil molestiae consequatur, vel eum fugiat, quo voluptas assumenda est. Sapiente delectus, ut aut rerum. 
+                    p Nihil molestiae consequatur, vel eum fugiat, quo voluptas assumenda est. Sapiente delectus, ut aut rerum.
+                .toggle-item.toggle-item--active
+                    .toggle-item__title.toggle-item__title--active Раскрывающийся блок с текстом
+                    .toggle-item__content(style="display:block;")
+                        p Lorem ipsum dolor sit amet. Deserunt mollitia animi, id est et aut perferendis. Voluptatem, quia non numquam eius modi. Suscipit laboriosam, nisi ut et dolorum fuga aspernatur. Nihil molestiae consequatur, vel eum fugiat, quo voluptas assumenda est. Sapiente delectus, ut aut rerum.
+                        p Necessitatibus saepe eveniet, ut labore et aut reiciendis voluptatibus maiores alias. Tempora incidunt, ut enim ipsam voluptatem quia. Nesciunt, neque porro quisquam est, omnis dolor.
+                .toggle-item
+                    .toggle-item__title Раскрывающийся блок с текстом
+                    .toggle-item__content
+            .modal.modal_advantage#advantage2
                 p Hello advantage 2!
-            .modal#advantage3
+            .modal.modal_advantage#advantage3
                 p Hello advantage 3!
-            .modal#advantage4
+            .modal.modal_advantage#advantage4
                 p Hello advantage 4!
-            .modal#advantage5
+            .modal.modal_advantage#advantage5
                 p Hello advantage 5!
-            .modal#advantage6
+            .modal.modal_advantage#advantage6
                 p Hello advantage 6!
         section.product#product
             .container
                 .row
                     .col-3
-                        h2.product__title Продукция
+                        h2.product__title.mb-0 Продукция
                     .col-9
                         p.product__offer Компания ДИФ СтройИнжиниринг работает в разных направлениях по изготовлению различных металлических конструкций. Вся выпускаемая продукция отвечает самым высоким требованиям заказчика и проходит проверку на качество.
-                .row
+                .row.pt-3.pb-4.product__row
                     +product('Заборы', '#product1')(style="background-image:url(../img/product-demo.jpg);")
                     +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo.jpg);")
                     +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo.jpg);")
@@ -74,59 +91,88 @@ html(lang="ru")
                     +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo.jpg);")
                     +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo.jpg);")
                     +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo.jpg);")
-        section.cta
+            .modal.modal_product#product1
+                .modal__content.modal_product__content
+                    p.h4.mb-2 Разработка металлических конструкций
+                    p Занимаемся производством металлоконструкций с 2012 г. 
+                    p Критерии нашего профессионализма – это индивидуальный подход к каждому клиенту, тщательная проработка заказов, регулярное обучение рабочих бригад, новейшее оборудование, качественное производство и соблюдение сроков поставки. 
+                    p Производим изделия из металла на заказ для частных и коммерческих объектов
+                    ul
+                        li Lorem ipsum dolor sit amet. 
+                        li Deserunt mollitia animi, id est et aut perferendis. 
+                        li Voluptatem, quia non numquam eius modi.
+                    p.h5.mt-2 Результаты последних работ
+                    .row
+                        .col-3.col-md-6.mb-1
+                            img.img-fluid(src="../img/product-demo.jpg")
+                        .col-3.col-md-6.mb-1
+                            img.img-fluid(src="../img/product-demo.jpg")
+                        .col-3.col-md-6.mb-1
+                            img.img-fluid(src="../img/product-demo.jpg")
+                        .col-3.col-md-6.mb-1
+                            img.img-fluid(src="../img/product-demo.jpg")
+                .cta.modal__cta
+                    p.h4 Ведущий эксперт ответит на ваши вопросы о проектах
+                    form.form.form_inline(action="")
+                        input.form_inline__input.form__input.form__input_inverse.phone(type="tel" placeholder="Телефон для связи")
+                        button.form_inline__btn.btn.btn_secondary(type="") Обсудить проект
+                        .form_inline__agree.form__agree.form__agree_inverse.checkbox
+                            input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                            label.checkbox__label(for="agree") согласен с 
+                                a.form__link-inverse(href="/policy.pdf" target="_blank") обработкой персональных данных
+        section.cta.pt-3.pb-3
             .container
-                .row.justify-content-between
-                    .col-6
+                .row.justify-content-between.align-items-center
+                    .col-7
                         h3.cta__title Не нашли нужное изделие? Спроектируем по индивидуальным параметрам!
                     .col-5
-                        form.form_inline(action="")
-                                input.form__input.phone(type="tel" placeholder="Телефон для связи")
-                                button.btn.btn_action(type="") Обсудить проект
-                                .form__agree.checkbox
+                        form.form.form_inline(action="")
+                                input.form_inline__input.form__input.form__input_inverse.phone(type="tel" placeholder="Телефон для связи")
+                                button.form_inline__btn.btn.btn_secondary(type="") Обсудить проект
+                                .form_inline__agree.form__agree.form__agree_inverse.checkbox
                                     input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
                                     label.checkbox__label(for="agree") согласен с 
-                                        a.link-underline(href="/policy.pdf" target="_blank") обработкой персональных данных
-        section.services
+                                        a.form__link-inverse(href="/policy.pdf" target="_blank") обработкой персональных данных
+        section.services.pt-4.pb-4
             .container
-                .row#project
+                .row.align-items-center#project
                     .col-5
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Проектирование
                         p.services__intro Оказываем услуги по проектированию и подготовке документации по объекту. Мы предлагаем весь комплекс работ: от составления технического задания до составления проектных документов и непосредственного проектирования объекта. Такой подход поможет оптимизировать расходы, а также уделить надлежащее внимание всем нюансам, которые могут возникнуть во время работы над проектом.
-                        +link-modal('Разработка металлической конструкции')
-                        +link-modal('Разработка документации конструкции')                      
+                        +link-modal('Разработка металлической конструкции')(class="services__link")
+                        +link-modal('Разработка документации конструкции')(class="services__link")
                     .col-6
                         img.services__image(src="../img/illustration.png")
-                .row#production
+                .row.align-items-center#production
                     .col-6
                         img.services__image(src="../img/illustration.png")
                     .col-5
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Производство
                         p.services__intro Производственная база компании ДИФ СтройИнжиниринг позволяет обеспечить высокое качество предлагаемых металлоконструкций. Техническое оснащение позволяет нам выполнять заказы по производству металлоконструкций различной сложности.
-                        +link-modal('Сварочные работы')
-                        +link-modal('Резка металла')
-                        +link-modal('Грунтовка')
-                        +link-modal('Сверление металла')
-                        +link-modal('Порошковая окраска')
-                .row#assembly
+                        +link-modal('Сварочные работы')(class="services__link")
+                        +link-modal('Резка металла')(class="services__link")
+                        +link-modal('Грунтовка')(class="services__link")
+                        +link-modal('Сверление металла')(class="services__link")
+                        +link-modal('Порошковая окраска')(class="services__link")
+                .row.align-items-center#assembly
                     .col-5
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Монтаж
                         p.services__intro  Профессиональный монтаж – это гарантия долгого срока службы и беспроблемной эксплуатации постройки, металлокаркаса здания. Мы осуществляем сборку и установку изделий из металла любого уровня сложности. 
-                        +link-modal('Узнать больше')
+                        +link-modal('Узнать больше')(class="services__link")
                     .col-6
                         img.services__image(src="../img/illustration.png")
-                .row#delivery
+                .row.align-items-center#delivery
                     .col-6
                         img.services__image(src="../img/illustration.png")
                     .col-5
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Доставка
                         p.services__intro Доставка металлоконструкций осуществляется по Санкт-Петербургу и Ленинградской области. Автопарк компании дает возможность доставлять металлоконструкции любых размеров. 
-                        +link-modal('Узнать больше')
-        section#about
+                        +link-modal('Узнать больше')(class="services__link")
+        section.pt-4.pb-4.bg-black#about
             .container
                 h3 Этапы работы
                 .row
@@ -134,9 +180,9 @@ html(lang="ru")
                     +step('02', 'Заключение договора', 'подписание договора в 2 экземплярах и внесение 50% предоплаты')
                     +step('03', 'Работы по заявке', 'изготовление издения сопровождается обязательным фотоотчетом')
                     +step('FINAL', 'Готовая металлическая конструкция', 'на 100% соответствующая вашим  изначальным требованиям')(class="step--last")
-        .contact#contact
+        .contact.pt-4.pb-4#contact
             .container
-                .row
+                .row.align-items-center
                     .col-3
                         ul.list
                             li.list__item
@@ -160,7 +206,7 @@ html(lang="ru")
                                 span.contact__subtitle КПП   
                                 span.contact__title 7841030006
                     .col-6
-                        #maps
+                        .contact__map#maps
 
         include chunks/footer.pug
         .navbar-overlay
@@ -169,6 +215,6 @@ html(lang="ru")
 
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
-        script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.inputmask.min.js")
 
         script(src="./js/app.min.js")

@@ -26,3 +26,12 @@
         background: linear-gradient(90deg, #242732 0%, rgba(36, 39, 50, 0.8) 73.2%, rgba(36, 39, 50, 0) 100%);
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-header{
+        padding: 100px 0 40px;
+        &:before{
+            background: linear-gradient(0deg, #242732 0%, rgba(36, 39, 50, 0.8) 73.2%, rgba(36, 39, 50, 0) 100%);
+        }
+    }
+}

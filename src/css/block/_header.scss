@@ -1,9 +1,4 @@
 .header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 99;
-
     font-family: $font-family-heading;
     padding: 20px 0;
     background-color: $black;
@@ -24,5 +19,15 @@
         &:hover, &:focus{
             text-decoration: none;
         }
+    }
+    &__btn{
+        color: $grey;
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        padding: $spacer/3 0;
     }
 }

@@ -1,11 +1,30 @@
 .content{
     position: relative;
-    padding: 70px 0;
     background-color: $black;
 
     &__form{
         position: absolute;
         bottom: 0;
         right: 0;
+
+        background-color: $bg-secondary;
+        padding: map-get($spacers, 2) map-get($spacers, 3);
+    }
+    &__form-offer{
+        color: $grey;
+        line-height: $line-height-heading;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content{
+        &__form{
+            position: unset;
+            padding: $spacer 0;
+            background-color: inherit;
+        }
+        &__form-title{
+            text-transform: uppercase;
+        }
     }
 }

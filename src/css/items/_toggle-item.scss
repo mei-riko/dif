@@ -1,0 +1,40 @@
+.toggle-item{
+    padding: $spacer/2;
+    border: 1px solid $grey;
+    background-color: $body-bg;
+
+    &__title{
+        font-family: $font-family-heading;
+        padding-right: $spacer;
+        position: relative;
+
+        &:after{
+            content:'';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url("../icon/arrow-up.svg") no-repeat center / 16px;
+
+            position: absolute;
+            top: calc( 50% - 12px );
+            right: 0;
+
+            transform: rotate(180deg);
+            transition: .4s;
+        }
+
+        &--active{
+            &:after{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &__content{
+        display: none;
+        color: $grey;
+        font-size: 14px;
+        line-height: $line-height-base;
+
+        padding-top: $spacer/2;
+    }
+}

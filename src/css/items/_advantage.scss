@@ -1,0 +1,36 @@
+.advantage{
+    position: relative;
+
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+
+    background: $dark-grey;
+    border: 1px solid $border-color;
+
+    padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 3);
+
+    &__title{
+        @extend .h5;
+        @extend .mt-0;
+        @extend .mb-1;
+        color: $white;
+    }
+    &__intro{
+        font-size: 14px;
+        color: $grey;
+    }
+    &__button{
+        position: absolute;
+        top: $spacer/2;
+        right: $spacer/2;
+    }
+
+    &_modal{
+        &:hover,&:focus{
+            color: $white;
+            text-decoration: none;
+            background: $black;
+        }
+    }
+}

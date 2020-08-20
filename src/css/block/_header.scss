@@ -25,7 +25,20 @@
         font-size: 13px;
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        &__btn{
+            padding: 8px 14px 10px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        &__btn{
+            padding: 8px 28px 10px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
         position: sticky;

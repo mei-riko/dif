@@ -215,6 +215,7 @@ a{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    html,body {font-size: map-get($font-size, 'lg');}
     .d-lg{
         &-flex{display: flex;}
         &-none{display: none;}
@@ -255,6 +256,7 @@ a{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
+    html,body {font-size: map-get($font-size, 'md');}
     .d-md{
         &-flex{display: flex;}
         &-none{display: none;}

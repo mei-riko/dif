@@ -6,7 +6,7 @@
     background-color: $black;
     
     &__logo{
-        width: 100%;
+        width: 120px;
         height: 48px;
 
         display: inline-block;
@@ -15,13 +15,5 @@
 
     &__intro{
         font-size: 12px;
-    }
-}
-
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .footer{
-        &__logo{
-            display: none;
-        }
     }
 }

@@ -9,7 +9,6 @@ $(document).ready(() =>{
     });
     return false;
   });
-
   // Input mask
   if( $('.phone').length > 0 ) {
     $(".phone").inputmask({
@@ -45,6 +44,20 @@ $(document).ready(() =>{
   $('a[data-trigger="click"]').click(function(e){
     e.preventDefault();
   })
+  // Раскрытие блока
+  $('.toggle-item').on("click", function(e){
+    e.preventDefault();
+    let toggle = $(this);
+    if( !toggle.hasClass("toggle-item--active")){
+      toggle.addClass("toggle-item--active");
+      toggle.find(".toggle-item__title").addClass("toggle-item__title--active");
+      toggle.find(".toggle-item__content").slideDown();
+		}else{
+			toggle.removeClass("toggle-item--active");
+      toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
+      toggle.find(".toggle-item__content").slideUp();
+    }
+  });
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Review Block Col
@@ -109,7 +122,7 @@ $(document).ready(() =>{
   $(document).mouseup(function (e){ // событие клика по веб-документу
     let dropdownActive = $(".navbar-collapse.navbar-collapse--active"); // элемент
     if (!dropdownActive.is(e.target) // клик был не по блоку
-          && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
+          // && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
           && !$(".navbar-toggle#nav").is(e.target) ) { 
               $(".navbar-collapse").removeClass("navbar-collapse--active");
               $(".navbar-overlay").removeClass("navbar-overlay--active");

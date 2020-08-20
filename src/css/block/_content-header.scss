@@ -26,7 +26,22 @@
         background: linear-gradient(90deg, #242732 0%, rgba(36, 39, 50, 0.8) 73.2%, rgba(36, 39, 50, 0) 100%);
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-header{
+        padding: 120px 0;
+        &__title{
+            font-size: 42px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-header{
+        padding: 100px 0;
+        &__title{
+            font-size: 32px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content-header{
         padding: 100px 0 40px;

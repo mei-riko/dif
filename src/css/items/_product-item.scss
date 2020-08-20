@@ -43,11 +43,18 @@
         background: no-repeat center / cover;
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product-item{
+        padding-left: 20px;
+        &__title{
+            font-size: 16px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .product-item{
         padding: 20px;
-        padding-top: 70px;
+        padding-top: 90px;
         padding-right: 40px;
 
         align-items: center;
@@ -66,18 +73,29 @@
             display: block;
             position: absolute;
             right: 10px;
-            top: calc(50% + 12px);
+            top: calc(50% + 22px);
         }
-
         &__image{
             width: 100%;
-            height: 50px;
+            height: 70px;
     
             position: absolute;
             top: 0;
             right: 0;
     
             background: no-repeat center / cover;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product-item{       
+        padding-top: 70px;
+        &__image{
+            height: 50px;            
+        }
+        &__icon{
+            right: 10px;
+            top: calc(50% + 12px);
         }
     }
 }

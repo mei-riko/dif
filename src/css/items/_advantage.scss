@@ -34,7 +34,14 @@
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .advantage{
+        padding: 30px 40px 30px 20px;
+        &__title{
+            font-size: 16px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .advantage{
         padding: 30px 20px;

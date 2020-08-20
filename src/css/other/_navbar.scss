@@ -35,14 +35,47 @@
 .navbar-icon{
     display: none;
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .navbar-mobile{
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
+
+        // Перемещение в .row
+        order: 2;
     }
     .navbar-collapse{
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+
+        width: 340px;
+        max-width: 94%;
+        height: 100%;
+        min-height: 100vh;
+        padding: $spacer;
+
+        background: $black;
+        transform: translateX(-340px);
+        transition: .5s;
+        
+        filter: drop-shadow(4px 0px 10px #000);
+
+        &--active{
+            transform: translateX(0);
+        }
+    }
+    .navbar{
+        &__item{
+            width: 100%;
+            margin: 4px 0;
+        }
+        &_secondary{
+            padding-bottom: 26px;
+            margin-bottom: 26px;
+            border-bottom: 1px solid $border-color;
+        }
     }
     .navbar-toggle{
         font-family: $font-family-base;
@@ -79,6 +112,33 @@
 
         &_phone{
             padding-left: 20px;
+        }
+    }
+    .navbar-close{
+        width: 24px;
+        height: 24px;
+        background: $body-bg url("../icon/close.svg") no-repeat center / 16px;
+
+        display: block;
+
+        position: absolute;
+        top: 32px;
+        right: 10px;
+    }
+    .navbar-overlay{
+        position: fixed;
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 98;
+        background: $dark-grey;
+
+        opacity:0;
+        transition: .4s;
+        &--active{
+            width: 100%;
+            opacity: 0.8;
         }
     }
 }

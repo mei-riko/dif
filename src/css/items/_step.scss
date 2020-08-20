@@ -52,15 +52,34 @@
                 height: auto;
                 font-size: 64px;
                 font-weight: 400;
+                line-height: 1;
                 background: inherit;
                 left: 30px;
-                bottom: -40px;
+                bottom: -20px;
                 max-width: calc(100% - 30px);
             }
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .step{
+        &__title{
+            font-size: 13px;
+            margin: 30px 0 10px;
+        }
+        &__intro{
+            font-size: 13px;
+        }
+        &--last{
+            .step__number{
+                &:after{
+                    font-size: 34px;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .step{
         margin-bottom: $spacer;
@@ -93,6 +112,7 @@
             bottom: auto;
         }
         &__title{
+            font-size: 1rem;
             margin: 15px 0 10px;
             padding-left: $spacer;
         }

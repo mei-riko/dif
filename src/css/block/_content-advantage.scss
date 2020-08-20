@@ -1,18 +1,11 @@
-.content-advantage{
-    &__block{
-        overflow-x: auto;
-    }
-    &__row{
-        min-width: 710px;
-    }
-}
-
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content-advantage{
         &__block{
+            overflow-x: auto;
             margin-right: -$spacer/2;
         }
         &__row{
+            min-width: 710px;
             padding-bottom: $spacer/2;
             padding-right: $spacer/2;
         }

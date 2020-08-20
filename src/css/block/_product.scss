@@ -7,20 +7,16 @@
         max-width: 100%;
         margin: 18px auto 0;
     }
-    &__block{
-        overflow-x: auto;
-    }
-    &__row{
-        min-width: 710px;
-    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .product{
         &__block{
+            overflow-x: auto;
             margin-right: -$spacer/2;
         }
         &__row{
+            min-width: 710px;
             padding-bottom: $spacer/2;
             padding-right: $spacer/2;
         }

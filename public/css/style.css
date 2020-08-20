@@ -3335,19 +3335,13 @@ a:hover, a:focus {
   }
 }
 
-.content-advantage__block {
-  overflow-x: auto;
-}
-
-.content-advantage__row {
-  min-width: 710px;
-}
-
 @media all and (max-width: 768px) {
   .content-advantage__block {
+    overflow-x: auto;
     margin-right: -15px;
   }
   .content-advantage__row {
+    min-width: 710px;
     padding-bottom: 15px;
     padding-right: 15px;
   }
@@ -3388,19 +3382,13 @@ a:hover, a:focus {
   margin: 18px auto 0;
 }
 
-.product__block {
-  overflow-x: auto;
-}
-
-.product__row {
-  min-width: 710px;
-}
-
 @media all and (max-width: 768px) {
   .product__block {
+    overflow-x: auto;
     margin-right: -15px;
   }
   .product__row {
+    min-width: 710px;
     padding-bottom: 15px;
     padding-right: 15px;
   }

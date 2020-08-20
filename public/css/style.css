@@ -415,6 +415,10 @@ a:hover, a:focus {
   outline: none;
 }
 
+table td {
+  padding: 8px 15px;
+}
+
 .link-inverse {
   color: #EF002B;
 }
@@ -429,6 +433,7 @@ a:hover, a:focus {
   font-weight: 700;
   color: #ffffff;
   padding-left: 30px;
+  margin-bottom: 15px;
 }
 
 .link-modal__icon {
@@ -453,8 +458,17 @@ a:hover, a:focus {
   fill: #ADADAD;
 }
 
-.link-modal + .link-modal {
-  margin-top: 15px;
+.link-modal:last-child {
+  margin-bottom: 0;
+}
+
+.link-white {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.link-white:hover, .link-white:focus {
+  color: #ffffff;
 }
 
 .location {
@@ -2303,8 +2317,7 @@ a:hover, a:focus {
   color: #ffffff;
   width: 720px;
   max-width: 100%;
-  height: 510px;
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
 .modal.fancybox-content {
@@ -2316,6 +2329,10 @@ a:hover, a:focus {
 .modal__content {
   font-weight: 200;
   line-height: 1.4;
+}
+
+.modal__content ul + * {
+  margin-top: 15px;
 }
 
 .modal__cta {
@@ -2650,23 +2667,23 @@ a:hover, a:focus {
   outline: none;
 }
 
-.form__input:hover::-webkit-input-placeholder, .form__input:focus::-webkit-input-placeholder {
+.form__input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.form__input:hover::-moz-placeholder, .form__input:focus::-moz-placeholder {
+.form__input:focus::-moz-placeholder {
   opacity: 0;
 }
 
-.form__input:hover:-ms-input-placeholder, .form__input:focus:-ms-input-placeholder {
+.form__input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.form__input:hover::-ms-input-placeholder, .form__input:focus::-ms-input-placeholder {
+.form__input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.form__input:hover::placeholder, .form__input:focus::placeholder {
+.form__input:focus::placeholder {
   opacity: 0;
 }
 
@@ -2778,6 +2795,15 @@ a:hover, a:focus {
 
 .form-validation.error {
   color: #EF002B !important;
+}
+
+.ajax_form span.error {
+  color: #EF002B !important;
+  font-size: 12px;
+}
+
+.ajax_form .error-inverse {
+  color: #ffffff !important;
 }
 
 @media all and (max-width: 768px) {
@@ -3456,6 +3482,8 @@ a:hover, a:focus {
   width: 100%;
   height: 280px;
   background-color: #16181F;
+  -webkit-filter: saturate(0);
+  filter: saturate(0);
 }
 
 @media all and (max-width: 576px) {

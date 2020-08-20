@@ -53,7 +53,11 @@ a{
         outline: none;
     }
 }
-
+table{
+    td{
+        padding: 8px 15px;
+    }
+}
 .link-inverse{
     color: $link-hover-color;
     &:hover{
@@ -66,6 +70,7 @@ a{
     font-weight: $font-weight-heading;
     color: $white;
     padding-left: $spacer;
+    margin-bottom: $spacer/2;
 
     &__icon{
         position: absolute;
@@ -87,8 +92,15 @@ a{
         }
     }
 
-    & + .link-modal{
-        margin-top: $spacer/2;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.link-white{
+    color: $white;
+    text-decoration: underline;
+    &:hover, &:focus{
+        color: $white;
     }
 }
 

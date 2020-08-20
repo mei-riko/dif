@@ -16,9 +16,9 @@
         &:hover, &:focus{
             border-color: $border-color;
             outline: none;
-            &::placeholder{
-                opacity: 0;
-            }
+        }
+        &:focus::placeholder{
+            opacity: 0;
         }
         // Для ошибок в MODx
         &.error{
@@ -94,6 +94,14 @@
     &.error{
         color: $red!important
     }
+}
+
+.ajax_form span.error{
+    color: $red!important;
+    font-size: 12px;
+}
+.ajax_form .error-inverse{
+    color: $white!important;
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){

@@ -13,6 +13,13 @@
     &:hover, &:focus{
         background: $black;
         text-decoration: none;
+        .product-item__image{
+            filter:grayscale(0);
+        }
+        .product-item__link{
+            // color: lighten($color: $red, $amount: 15);
+           letter-spacing: 1.5px;
+        }
     }
 
     &__title{
@@ -27,6 +34,7 @@
         color: $red;
         text-transform: uppercase;
         letter-spacing: 1px;
+        transition: .4s;
     }
     &__icon{
         display: none;
@@ -41,6 +49,9 @@
         right: -10px;
 
         background: no-repeat center / cover;
+
+        transition: .4s;
+        filter: grayscale(1);
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){

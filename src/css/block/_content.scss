@@ -1,7 +1,9 @@
 .content{
     position: relative;
     background-color: $black;
-
+    &__intro{
+        font-size: 20px;
+    }
     &__form{
         position: absolute;
         bottom: 0;

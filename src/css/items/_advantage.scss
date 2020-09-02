@@ -27,6 +27,9 @@
     }
 
     &_modal{
+        &:hover{
+            border-color: $red;
+        }
         &:hover,&:focus{
             color: $white;
             text-decoration: none;

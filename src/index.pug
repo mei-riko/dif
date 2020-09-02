@@ -23,7 +23,12 @@ html(lang="ru")
             .container
                 .row
                     .col-7.pt-4.pb-4.pt-md-2.pb-md-2.d-sm-none
-                        p Компания ДИФ СтройИнжиниринг предлагает весь спектр строительных работ с использованием металлоконструкций: от проектирования до монтажа. Производство зданий, сооружений и изделий с использованием металлоконструкций нашими специалистами – это оптимальная стоимость и высокий уровень качества, проверенный временем.
+                        p.content__intro ДИФ СтройИнжиниринг предлагает 
+                            | весь спектр строительных работ 
+                            | с использованием металлоконструкций: от проектирования до монтажа. 
+                            | Производство зданий, сооружений и изделий нашими специалистами – это 
+                            span.text-bold.text-red оптимальная стоимость и высокий уровень качества
+                            | , проверенный временем.
                     .col-1.d-md-none &nbsp;
                     .col-3.col-lg-4.col-md-5.col-sm-12
                         .content__form
@@ -82,16 +87,16 @@ html(lang="ru")
                         p.product__offer Компания ДИФ СтройИнжиниринг работает в разных направлениях по изготовлению различных металлических конструкций. Вся выпускаемая продукция отвечает самым высоким требованиям заказчика и проходит проверку на качество.
                 .product__block
                     .row.pt-3.pb-4.product__row
-                        +product('Заборы', '#product1')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Навесы', '#product4')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Решётки', '#product5')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Арматурные каркасы', '#product6')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Беседки', '#product7')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo.jpg);")
-                        +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo.jpg);")
+                        +product('Заборы', '#product1')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Ограждения', '#product2')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Лестницы', '#product3')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Навесы', '#product4')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Решётки', '#product5')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Арматурные каркасы', '#product6')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Беседки', '#product7')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Закладные детали', '#product8')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Металлические формы', '#product9')(style="background-image:url(../img/product-demo-2.jpg);")
+                        +product('Контейнерные площадки', '#product10')(style="background-image:url(../img/product-demo-2.jpg);")
             .modal.modal_product#product1
                 .modal__content.modal_product__content
                     p.h4.mb-2 Разработка металлических конструкций
@@ -105,13 +110,13 @@ html(lang="ru")
                     p.h5.mt-2 Результаты последних работ
                     .row
                         .col-3.col-md-6.mb-1
-                            img.img-fluid(src="../img/product-demo.jpg")
+                            img.img-fluid(src="../img/product-demo-2.jpg")
                         .col-3.col-md-6.mb-1
-                            img.img-fluid(src="../img/product-demo.jpg")
+                            img.img-fluid(src="../img/product-demo-2.jpg")
                         .col-3.col-md-6.mb-1
-                            img.img-fluid(src="../img/product-demo.jpg")
+                            img.img-fluid(src="../img/product-demo-2.jpg")
                         .col-3.col-md-6.mb-1
-                            img.img-fluid(src="../img/product-demo.jpg")
+                            img.img-fluid(src="../img/product-demo-2.jpg")
                 .cta.modal__cta
                     p.h4 Ведущий эксперт ответит на ваши вопросы о проектах
                     form.form.form_inline(action="")
@@ -141,8 +146,9 @@ html(lang="ru")
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Проектирование
                         p.services__intro Оказываем услуги по проектированию и подготовке документации по объекту. Мы предлагаем весь комплекс работ: от составления технического задания до составления проектных документов и непосредственного проектирования объекта. Такой подход поможет оптимизировать расходы, а также уделить надлежащее внимание всем нюансам, которые могут возникнуть во время работы над проектом.
-                        +link-modal('Разработка металлической конструкции')(class="services__link")
-                        +link-modal('Разработка документации конструкции')(class="services__link")
+                        .services__link-row
+                            +link-modal('Разработка металлической конструкции')(class="services__link")
+                            +link-modal('Разработка документации конструкции')(class="services__link")
                     .col-6.col-sm-12
                         img.img-fluid.services__image(src="../img/illustration.png")
                 .row.flex-sm-column-reverse.align-items-center#production
@@ -152,17 +158,19 @@ html(lang="ru")
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Производство
                         p.services__intro Производственная база компании ДИФ СтройИнжиниринг позволяет обеспечить высокое качество предлагаемых металлоконструкций. Техническое оснащение позволяет нам выполнять заказы по производству металлоконструкций различной сложности.
-                        +link-modal('Сварочные работы')(class="services__link")
-                        +link-modal('Резка металла')(class="services__link")
-                        +link-modal('Грунтовка')(class="services__link")
-                        +link-modal('Сверление металла')(class="services__link")
-                        +link-modal('Порошковая окраска')(class="services__link")
+                        .services__link-row
+                            +link-modal('Сварочные работы')(class="services__link")
+                            +link-modal('Резка металла')(class="services__link")
+                            +link-modal('Грунтовка')(class="services__link")
+                            +link-modal('Сверление металла')(class="services__link")
+                            +link-modal('Порошковая окраска')(class="services__link")
                 .row.align-items-center#assembly
                     .col-5.col-lg-6.col-sm-12.mb-sm-1
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Монтаж
                         p.services__intro  Профессиональный монтаж – это гарантия долгого срока службы и беспроблемной эксплуатации постройки, металлокаркаса здания. Мы осуществляем сборку и установку изделий из металла любого уровня сложности. 
-                        +link-modal('Узнать больше')(class="services__link")
+                        .services__link-row
+                            +link-modal('Узнать больше')(class="services__link")
                     .col-6.col-sm-12
                         img.img-fluid.services__image(src="../img/illustration.png")
                 .row.flex-sm-column-reverse.align-items-center#delivery
@@ -172,7 +180,8 @@ html(lang="ru")
                         p.services__subtitle Комплекстность услуг
                         h3.services__title Доставка
                         p.services__intro Доставка металлоконструкций осуществляется по Санкт-Петербургу и Ленинградской области. Автопарк компании дает возможность доставлять металлоконструкции любых размеров. 
-                        +link-modal('Узнать больше')(class="services__link")
+                        .services__link-row
+                            +link-modal('Узнать больше')(class="services__link")
         section.pt-4.pb-4.bg-black#about.pt-sm-2.pb-sm-2
             .container
                 h3 Этапы работы

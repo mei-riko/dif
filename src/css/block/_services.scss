@@ -16,7 +16,12 @@
         color: $grey;
         margin-bottom: map-get($map: $spacers, $key: 4);
     }
+    &__link-row{
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__link{
+        font-size: 18px;
         min-width: 50%;
     }
 }
@@ -24,6 +29,10 @@
     .services{
         &__intro{
             margin-bottom: map-get($map: $spacers, $key: 1);
+        }
+        &__link{
+            font-size: 14px;
+            min-width: 50%;
         }
     }
 }

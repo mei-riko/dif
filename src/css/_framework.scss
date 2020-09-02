@@ -16,11 +16,11 @@ h1, h2, h3, h4, h5, h6,
     font-family: $font-family-heading;
     font-weight: $font-weight-heading;
     line-height: $line-height-heading;
-    margin-bottom: map-get($spacers, 2);
+    margin-bottom: map-get($spacers, 1);
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: map-get($spacers, 1);
+    margin-top: map-get($spacers, 2);
 }
 .h1,h1{font-size: 64px;}
 .h2,h2{font-size: 46px;}
@@ -132,6 +132,7 @@ table{
 .text-white{color: $white;}
 .text-black{color: $black;}
 .text-grey{color: $grey;}
+.text-red{color: $red;}
 
 .text-uppercase{text-transform: uppercase;}
 .text-bold,strong,b{font-weight: 700;}

@@ -11,6 +11,7 @@
     &__offer{
         width: 550px;
         max-width: 100%;
+        @extend .text-grey;
     }
 
     &:before{

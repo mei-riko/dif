@@ -41,6 +41,7 @@
     }
     &__intro{
         color: $grey;
+        line-height: 1.2;
     }
 
 
@@ -50,7 +51,7 @@
             &:after{
                 content: 'FINAL';
                 height: auto;
-                font-size: 64px;
+                font-size: 48px;
                 font-weight: 400;
                 line-height: 1;
                 background: inherit;

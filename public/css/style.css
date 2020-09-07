@@ -3226,6 +3226,7 @@ table td {
 
 .toggle-item__title {
   font-family: "Oswald", sans-serif;
+  font-size: 18px;
   padding-right: 30px;
   position: relative;
 }
@@ -3256,7 +3257,6 @@ table td {
 .toggle-item__content {
   display: none;
   color: #ADADAD;
-  font-size: 14px;
   line-height: 1.4;
   padding-top: 15px;
 }

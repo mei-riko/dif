@@ -1,10 +1,19 @@
 import $ from 'jquery'
 $(document).ready(() =>{
   $(".scroll").click(function() {
+    let offset = 0;
+    if( $(this).attr("href") === "#about"){
+      offset = 50;
+    }
+    if ( $(window).width() < 992 || window.matchMedia('screen and (max-width: 992px)').matches ){
+      offset = 80;
+    }
+
+    console.log( $(this).attr("href") );
     $("html, body").animate({
-       scrollTop: $($(this).attr("href")).offset().top + "px"
+       scrollTop: $($(this).attr("href")).offset().top - offset + "px"
     }, {
-       duration: 500,
+       duration: 700,
        easing: "swing"
     });
     return false;

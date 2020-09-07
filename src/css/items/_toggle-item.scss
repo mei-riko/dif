@@ -5,6 +5,7 @@
 
     &__title{
         font-family: $font-family-heading;
+        font-size: 18px;
         padding-right: $spacer;
         position: relative;
 
@@ -32,7 +33,7 @@
     &__content{
         display: none;
         color: $grey;
-        font-size: 14px;
+        // font-size: 14px;
         line-height: $line-height-base;
 
         padding-top: $spacer/2;

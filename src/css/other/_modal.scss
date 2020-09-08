@@ -29,6 +29,17 @@
                 margin-top: $spacer/2;
             }
         }
+        ol{
+            @extend .list;
+            @extend .list_numeric;
+            li{
+                @extend .list_numeric__item;
+            }
+
+            & + *{
+                margin-top: $spacer/2;
+            }
+        }
     }
     &__cta{
         padding: map-get($map: $spacers, $key: 3);

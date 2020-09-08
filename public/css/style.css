@@ -2340,6 +2340,10 @@ table td {
   margin-top: 15px;
 }
 
+.modal__content ol + * {
+  margin-top: 15px;
+}
+
 .modal__cta {
   padding: 45px;
 }
@@ -2940,7 +2944,7 @@ table td {
   }
 }
 
-.list, .modal__content ul {
+.list, .modal__content ul, .modal__content ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2964,6 +2968,19 @@ table td {
 }
 
 .list_content__item:last-child, .modal__content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.list_numeric, .modal__content ol {
+  padding-left: 28px;
+  list-style: decimal-leading-zero;
+}
+
+.list_numeric__item, .modal__content ol li {
+  margin-bottom: 6px;
+}
+
+.list_numeric__item:last-child, .modal__content ol li:last-child {
   margin-bottom: 0;
 }
 
